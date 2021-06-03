@@ -5,7 +5,6 @@ const btn = document.querySelector("#nav_btn");
 
 $(btn).on("click", () =>{
     let theNav = document.querySelector("#asideNAv");
-     console.log(theNav);
       
      if (theNav.style.display != "block") {
         $(theNav).slideToggle(300);

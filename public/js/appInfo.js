@@ -15,7 +15,7 @@ $(() => {
               'x-auth-token': localStorage['token']
           }
       })
-        console.log(resp.data);
+        // console.log(resp.data);
         userId = resp.data._id;
 
         $('#id_user').val(resp.data.user),

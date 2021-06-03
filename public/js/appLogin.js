@@ -9,7 +9,7 @@ const init = () =>{
            email: $('#id_email').val(),
            pass: $('#id_pass').val()
         }
-        console.log(dataBody);
+        // console.log(dataBody);
         axios({
             method: 'POST',
             url: 'http://localhost:3000/users/login/',
