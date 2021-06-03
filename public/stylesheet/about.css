@@ -1,0 +1,27 @@
+
+main{
+    background-image:url('/public/img/clapperboard-popcorn-film-stripe-cinema-tickets-wooden-desk.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+main .about{
+    background: linear-gradient(
+        135deg,
+        rgba(73, 155, 234, 0.8) 0%,
+        rgba(255, 255, 255, 0.897) 100%
+      );
+  min-height: 240px;
+  border-radius: 20px;
+  padding: 28px 12px;
+  margin: 0 auto;
+  margin-top: 20%;
+}
+main .about p{
+    font-size: 1.2em;
+}
+@media screen and (max-width:768px){
+    main .about p{
+        font-size: 1em;
+    }
+}

@@ -1,0 +1,99 @@
+*{
+    box-sizing: border-box;   
+}
+body{
+      height: 100vh;
+}
+main h2{
+    color:white;
+    text-shadow: 0 0 15px rgba(5, 43, 84, 1), 1px 10px 15px rgba(5, 43, 84, 1);}
+main form{
+    height: 400px;
+    /* background-color: rgba(255, 255, 255, 0.753); */
+    margin:0 auto;
+    background: linear-gradient(
+    135deg,
+    rgba(73, 155, 234, 1) 0%,
+    white 100%
+  );
+    /* box-shadow: 0 4px 6px 0 rgba(5, 43, 84, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    margin-top: 10vh;
+    padding: 44px;
+    padding-top: 80px;
+    border-radius: 10px;
+    font-family: cursive;
+}
+main form input{
+    border: 1px solid rgba(73, 156, 234,1);
+    padding: 2px;
+    border-radius: 4px;
+    width: 100%;
+}
+main form select{
+    border: 1px solid rgba(73, 156, 234,1);
+    padding: 2px;
+    border-radius: 4px;
+    width: 100%;
+}
+main form .container .line{
+    width: 100%;
+    height: 1.6px;
+    background: linear-gradient(
+        135deg,
+        rgba(5, 43, 84, 1) 10%,
+        rgba(73, 155, 234, 1) 100%
+      );
+}
+main form button{
+    padding: 6px;
+    margin: 0 25%;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    width: 50%;
+    background: linear-gradient(
+        135deg,
+        rgb(11, 48, 88) 0%,
+        rgba(73, 155, 234, 1) 100%
+      );
+      transition: 1s;
+
+}
+main form button:hover{
+    transform: rotateY(20deg);
+    background: linear-gradient(
+        135deg,
+        rgba(73, 155, 234, 1) 0%,
+        rgb(11, 48, 88) 100%
+      );
+}
+thead{
+    background: linear-gradient(45deg, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
+
+}
+#delBtn{
+    width: 90%;
+    padding: 4px;
+    font-size: .9em;
+    color: rgba(5, 43, 84, 1);
+    font-style: italic;
+    border-radius: 5px;
+    background: linear-gradient(
+      135deg,
+      tomato 0%,
+      white 100%
+    );  
+}
+#editBtn{
+    width: 90%;
+    padding: 4px;
+    font-size: .9em;
+    color: rgba(5, 43, 84, 1);
+    font-style: italic;
+    border-radius: 5px;
+    background: linear-gradient(
+      135deg,
+      yellow 0%,
+      white 100%
+    );  
+}

@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(73,155,237,0.6) 100%);
+}
+main {
+  text-align: center;
+}
+main .navMov {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 90vh;
+  background: radial-gradient(circle, rgba(255,255,255,1)0%, rgba(73,156,234,1) 90%);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 1.7em;
+}
+main a {
+  margin: 40px;
+}
+main .allBox {
+  margin-top: 36px;
+  padding: 0 60px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+main .box {
+  /* border: 2px solid rgba(73, 155, 234, 1); */
+  box-shadow: 0px 0px 33px 2px rgba(179,179,179,1);
+  width: 50%;
+  padding: 0;
+  text-align: center;
+  margin: 16px 0;
+  color: rgb(27, 56, 83);
+  border-radius: 5px;
+  background: white;
+}
+@media screen and (max-width:992px){
+  main .allBox {
+    margin-top: 36px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  main .box {
+    width: 45%;
+    margin: 24px 0;
+}
+}
+@media screen and (max-width:768px){
+  main .allBox {
+    margin-top: 36px;
+    padding: 0 60px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  main .box {
+    width: 100%;
+    margin: 24px 0;
+}
+}
+@media screen and (max-width:568px){
+  main .navMov {
+    margin: 0;
+    padding: 0;
+    height: 90vh;
+    background: linear-gradient(
+      45deg,
+      rgba(191, 185, 191, 1) 0%,
+      rgba(73, 156, 234,1)45%,
+      rgba(237, 237, 237, 1) 100%
+    );
+    display: block;
+    justify-content: center;
+    font-size: 1.7em;
+    color: white;
+  }
+  
+  main .navMov #a{
+    padding-top: 45%;
+  }
+  main .navMov a{
+    color: white;
+  }
+  main .allBox {
+    margin-top: 36px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  main .box h2{
+    font-size: 1.2em;
+}
+  main .box {
+    width: 100%;
+    margin: 12px 0;
+    font-size: .8em;
+    padding: 4px;
+}
+}
