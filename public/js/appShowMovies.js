@@ -31,7 +31,7 @@ const showMyMovies = async() =>{
             'x-auth-token': localStorage['token']
         }
     })
-            console.log(resp.data);
+            // console.log(resp.data);
             createShowMovies(resp.data)
     } catch(err){
         console.error(err);
@@ -44,7 +44,7 @@ const showAllMovies = () =>{
         url: 'http://localhost:3000/movies/',
     })
     .then(myData =>{
-        console.log(myData.data);
+        // console.log(myData.data);
         createShowMovies(myData.data)
 
     })

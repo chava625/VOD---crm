@@ -30,7 +30,6 @@ $(() => {
   const declareViewEvents = () => {
     $("#id_form").on("submit",(e) => {
       e.preventDefault();
-      //TODO: לעשות ולדיזאציה קצת יותר מורכבת 
       editInfo()
     })
   };

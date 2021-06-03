@@ -13,7 +13,7 @@ const init = async () => {
         "x-auth-token": localStorage["token"],
       },
     });
-    console.log(resp.data);
+    // console.log(resp.data);
     createMovie(resp.data);
     $.supermodal();
   } catch (err) {

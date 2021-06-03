@@ -11,7 +11,7 @@ const init = () => {
             info: $('#id_info').val(),
             category: $('#id_cat').val() 
         }
-        console.log(dataBody);
+        // console.log(dataBody);
         axios({
             method:'POST',
             url: 'http://localhost:3000/movies/add/',

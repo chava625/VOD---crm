@@ -11,8 +11,6 @@ $(btn).on("click", () =>{
         theNav.style.display = "block";
         theNav.className = "d-block d-md-flex open";
         document.querySelector("#nav_btn").innerHTML = `<i class="fa fa-times" aria-hidden="true"></i>`;
-    
-    
       }
       else {
         theNav.style.display = "none"

@@ -16,7 +16,7 @@ const init = () =>{
             data: dataBody  
         })
         .then(myData =>{
-            console.log(myData.data);
+            // console.log(myData.data);
             localStorage.setItem('token', myData.data.token)
             window.location.href = 'myInfo.html'
         })
