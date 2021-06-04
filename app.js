@@ -8,6 +8,7 @@ const usersRouter = require('./routes/users')
 const moviesRouter = require('./routes/movies')
 
 const app = express();
+const cors = require('cors');
 
 app.all('*', function (req, res, next) {
   if (!req.get('Origin')) return next();
@@ -19,6 +20,7 @@ app.all('*', function (req, res, next) {
 
 app.use(express.static('public'));
 app.use(express.json());
+app.use(cors());
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
