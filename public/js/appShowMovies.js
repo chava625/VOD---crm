@@ -2,12 +2,13 @@ import { createShowMovies } from './movies/showmovieManager.js';
 import { auth } from "../services/auth.js";
 
 $(() => {
-  if(localStorage['token']){
-  init();
-  }
-  else{
-    window.location.href = 'login.html'
-  }
+  init()
+  // if(localStorage['token']){
+  // init();
+  // }
+  // else{
+  //   window.location.href = 'login.html'
+  // }
 });
 
 const init = async() => {

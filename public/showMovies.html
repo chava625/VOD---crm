@@ -29,6 +29,22 @@
            <div class="link" id="a"><a class="mx-0 mx-md-2" id="myM" href="#">My Movies</a></div>
            <div class="link"><a class="mx-0 mx-md-2" id="allM" href="#">Movies of all users</a></div>
         </div>
+        <br>
+        <!-- <div>
+            <button  class="btn btn-primary btn-sm">Songs</button>&nbsp;
+            <button class="btn btn-primary btn-sm">Children</button>&nbsp;
+            <button class="btn btn-primary btn-sm">Cakes</button>&nbsp;
+            <button class="btn btn-primary btn-sm">All</button>
+        </div> -->
+        <div>
+            <select class="col-4 col-md-2 custom-select custom-select-sm">
+                <option >Order By:</option>
+                <option value="songs">Songs</option>
+                <option value="children">Children</option>
+                <option value="cakes">Cakes</option>
+                <option value="all">All</option>
+            </select>
+        </div>
         <div class="allBox" id="id_parent">
         </div>
 
@@ -39,7 +55,6 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
-      
     </script>
         <script type="module" src="js/appShowMovies.js"></script>
 </body>
