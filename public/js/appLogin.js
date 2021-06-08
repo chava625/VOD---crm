@@ -12,7 +12,7 @@ const init = () =>{
         // console.log(dataBody);
         axios({
             method: 'POST',
-            url: 'mongodb+srv://chava:cscs2453@cluster0.zzl1c.mongodb.net/vod/users/login/',
+            url: 'http://localhost:3000/users/login/',
             data: dataBody  
         })
         .then(myData =>{
