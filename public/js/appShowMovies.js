@@ -3,24 +3,27 @@ import { auth } from "../services/auth.js";
 
 $(() => {
   init()
-  // if(localStorage['token']){
-  // init();
-  // }
-  // else{
-  //   window.location.href = 'login.html'
-  // }
+  if(localStorage['token']){
+  init();
+  }
+  else{
+    window.location.href = 'login.html'
+  }
 });
 
 const init = async() => {
-  $("#myM").on("click", () => {
-    $('.navMov').toggleClass()
-    $('.lineB').show()
+  // $("#myM").on("click", () => {
+  //   $('.navMov').toggleClass()
+  //   $('.lineB').show()
     showMyMovies();
-  });
-  $("#allM").on("click", () => {
-    $('.navMov').toggleClass()
-    $('.lineB').show()
-    showAllMovies();
+  // });
+  // $("#allM").on("click", () => {
+  //   $('.navMov').toggleClass()
+  //   $('.lineB').show()
+  //   showAllMovies();
+  // });
+  $('#id_select').on('change', ()=>{
+    showMyMoviesCat()
   });
 };
 
@@ -32,22 +35,40 @@ const showMyMovies = async() =>{
             'x-auth-token': localStorage['token']
         }
     })
-            // console.log(resp.data);
-            createShowMovies(resp.data)
+    let data = resp.data;
+    createShowMovies(data);
     } catch(err){
         console.error(err);
     }
 }
-
-const showAllMovies = () =>{
-    axios({
-        method: 'GET',
-        url: 'http://localhost:3000/movies/',
+const showMyMoviesCat = async() =>{
+    let dataAuth = await auth()
+    try{
+        let resp = await axios.get('http://localhost:3000/movies/ofUser',{
+        headers: {
+            'x-auth-token': localStorage['token']
+        }
     })
-    .then(myData =>{
-        // console.log(myData.data);
-        createShowMovies(myData.data)
-
+    let data = resp.data;
+    let dataCat = data.filter(item =>{
+      if($('#id_select').val() == 'all'){
+        return item.category;
+      }
+      return item.category == $('#id_select').val();
     })
-    .catch( err => console.log(err))
+    console.log(dataCat);
+    createShowMovies(dataCat);
+    } catch(err){
+        console.error(err);
+    }
 }
+// const showAllMovies = () =>{
+//     axios({
+//         method: 'GET',
+//         url: 'http://localhost:3000/movies/',
+//     })
+//     .then(resp =>{
+//         createShowMovies(resp.data)
+//     })
+//     .catch( err => console.log(err))
+// }

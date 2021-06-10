@@ -24,8 +24,8 @@ main a {
   margin: 40px;
 }
 main .allBox {
-  margin-top: 36px;
-  padding: 0 60px;
+  margin-top: 28px;
+  padding: 0 32px;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -40,6 +40,13 @@ main .box {
   color: rgb(27, 56, 83);
   border-radius: 5px;
   background: white;
+}
+main .box h2{
+  font-size: 1.5em;
+  padding:0 8px;
+}
+main .box p{
+  padding:0 8px;
 }
 @media screen and (max-width:992px){
   main .allBox {

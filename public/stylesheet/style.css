@@ -107,11 +107,17 @@ main nav a:hover {
    color: lightskyblue;
   }
 }
-@media screen and (max-width:576פס){
+@media screen and (max-width:576px){
   header h2 {
     font-size: 1.5em;
   }
   header #btnOut{
     margin: 0 8px;
+  }
+  header .logIn{
+    font-size: 0.6em;
+  }
+  header .logIn a{
+    margin:0;
   }
 }
