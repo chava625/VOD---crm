@@ -41,4 +41,4 @@ app.use((err, req, res, next) => {
 });
  
 // app.listen(3000);
-app.listen(process.env.PORT || '0.0.0.0')
+app.listen(process.env.PORT || 3000)
