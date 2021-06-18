@@ -13,13 +13,14 @@ const init = async () => {
         "x-auth-token": localStorage["token"],
       },
     });
-    console.log(resp.data.length);
-    // if(resp.data.length > 0){
-
-    // }
+    // console.log(resp.data.length);
+    if(resp.data.length > 0){
+      createMovie(resp.data);
+      $.supermodal();
+    } else {
+      createMovie('no results')
+    }
     // console.log(resp.data);
-    createMovie(resp.data);
-    $.supermodal();
   } catch (err) {
     console.error(err);
   }
