@@ -97,6 +97,9 @@ main nav a:hover {
 .animate__animated.animate__bounce {
   --animate-duration: 3s;
 }
+h5{
+  color: gray;
+}
 @media screen and (max-width:768px){
   header nav a {
     margin: 0 4px;
