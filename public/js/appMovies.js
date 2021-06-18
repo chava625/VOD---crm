@@ -8,7 +8,7 @@ $(() => {
 const init = async () => {
   let dataAuth = await auth();
   try {
-    let resp = await axios.get("http://localhost:3000/movies/ofUser", {
+    let resp = await axios.get("/movies/ofUser", {
       headers: {
         "x-auth-token": localStorage["token"],
       },

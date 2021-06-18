@@ -14,7 +14,7 @@ const init = () => {
         // console.log(dataBody);
         axios({
             method:'POST',
-            url: 'http://localhost:3000/movies/add/',
+            url: '/movies/add/',
             data: dataBody,
             headers: {
                 'x-auth-token': localStorage['token']

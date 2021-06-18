@@ -13,7 +13,7 @@ const init = () => {
         console.log(dataBody);
         axios({
             method: 'POST',
-            url: 'http://localhost:3000/users/add/',
+            url: '/users/add/',
             data: dataBody,
             headers: {
                 'Content-Type': 'application/json',

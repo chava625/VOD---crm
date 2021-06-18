@@ -10,7 +10,7 @@ $(() => {
     let data = await auth();
     if(data.status == 'ok'){
       try{
-        let resp = await axios.get('http://localhost:3000/users/single/',{
+        let resp = await axios.get('/users/single/',{
           headers: {
               'x-auth-token': localStorage['token']
           }
@@ -42,7 +42,7 @@ $(() => {
     }
     axios({
       method: 'PUT',
-      url: "http://localhost:3000/users/edit/",
+      url: "/users/edit/",
       data: dataBody
     })
     .then(myData =>{

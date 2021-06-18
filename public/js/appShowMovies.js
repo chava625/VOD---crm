@@ -30,7 +30,7 @@ const init = async() => {
 const showMyMovies = async() =>{
     let dataAuth = await auth()
     try{
-        let resp = await axios.get('http://localhost:3000/movies/ofUser',{
+        let resp = await axios.get('/movies/ofUser',{
         headers: {
             'x-auth-token': localStorage['token']
         }
@@ -44,7 +44,7 @@ const showMyMovies = async() =>{
 const showMyMoviesCat = async() =>{
     let dataAuth = await auth()
     try{
-        let resp = await axios.get('http://localhost:3000/movies/ofUser',{
+        let resp = await axios.get('/movies/ofUser',{
         headers: {
             'x-auth-token': localStorage['token']
         }
@@ -65,7 +65,7 @@ const showMyMoviesCat = async() =>{
 // const showAllMovies = () =>{
 //     axios({
 //         method: 'GET',
-//         url: 'http://localhost:3000/movies/',
+//         url: '/movies/',
 //     })
 //     .then(resp =>{
 //         createShowMovies(resp.data)

@@ -19,19 +19,20 @@ router.get("/", (req, res) => {
     }
   });
 });
-router.get('/auth',authToken,(req,res) => {
-  res.json({status:"ok"}) 
+router.get("/auth", authToken, (req, res) => {
+  res.json({ status: "ok" });
 });
 
-router.get("/single/",authToken, (req, res) => {
+router.get("/single/", authToken, (req, res) => {
   let userId = req._id;
-  userModel.findOne({ _id: userId }, { user: 1, email: 1 })
-    .then(data => {
+  userModel
+    .findOne({ _id: userId }, { user: 1, email: 1 })
+    .then((data) => {
       res.json(data);
     })
-    .catch(err => {
+    .catch((err) => {
       res.status(400).json(err);
-    })
+    });
 });
 router.get("/admin", authToken, (req, res) => {
   userModel.find({}, (err, data) => {
@@ -43,6 +44,7 @@ router.get("/admin", authToken, (req, res) => {
   });
 });
 router.post("/login", async (req, res) => {
+  console.log("login");
   let valid = validLogin(req.body);
   if (!valid.error) {
     try {
@@ -61,6 +63,9 @@ router.post("/login", async (req, res) => {
     } catch (err) {
       res.status(401).json(err);
     }
+  }
+  else {
+    res.status(400).json({message: 'not valid'})
   }
 });
 

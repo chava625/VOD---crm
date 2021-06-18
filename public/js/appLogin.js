@@ -12,7 +12,7 @@ const init = () =>{
         // console.log(dataBody);
         axios({
             method: 'POST',
-            url: 'http://localhost:3000/users/login/',
+            url: '/users/login/',
             data: dataBody  
         })
         .then(myData =>{

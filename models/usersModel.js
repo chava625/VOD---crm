@@ -44,7 +44,7 @@ const validEditUser = (_userObj) => {
 const validLogin = (_user) =>{
     let schema = Joi.object({
         email: Joi.string().min(2).max(50).required(),
-        password: Joi.string().min(2).max(50).required()
+        pass: Joi.string().min(2).max(50).required()
     })
     return schema.validate(_user);
 }
