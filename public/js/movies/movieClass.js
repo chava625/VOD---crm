@@ -61,7 +61,7 @@ class MovieItem {
 const del = (_id) => {
   axios({
     method: "DELETE",
-    url: "http://localhost:3000/movies/delete/" + _id,
+    url: "/movies/delete/" + _id,
     headers: {
       "x-auth-token": localStorage["token"],
     },
@@ -86,7 +86,7 @@ const edit = () => {
   }
   axios({
     method: 'PUT',
-    url: "http://localhost:3000/movies/edit/",
+    url: "/movies/edit/",
     headers: {
       "x-auth-token": localStorage["token"],
     },

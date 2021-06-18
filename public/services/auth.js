@@ -3,7 +3,7 @@ export const auth = async() => {
       return window.location.href = "login.html"
     }
     try{
-      let myData = await axios.get("http://localhost:3000/users/auth",{
+      let myData = await axios.get("/users/auth",{
         headers: {
           "x-auth-token": localStorage["token"],
         }
