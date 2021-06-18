@@ -18,7 +18,7 @@ const init = async () => {
       createMovie(resp.data);
       $.supermodal();
     } else {
-      $('.tbl').html('<h2>You have no movies you need to <a href="/addMovie.html">Upload</a></h2>')
+      $('.tbl').html('<h3>You have no movies you need to <a href="/addMovie.html">Upload</a></h3>')
     }
     // console.log(resp.data);
   } catch (err) {
