@@ -36,6 +36,7 @@ const showMyMovies = async() =>{
         }
     })
     let data = resp.data;
+    console.log(data.length);
     createShowMovies(data);
     } catch(err){
         console.error(err);
