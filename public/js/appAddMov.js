@@ -9,7 +9,7 @@ const init = () => {
         console.log(resMovCode[1]);
         let dataBody = {
             title: $('#id_title').val(),
-            movieCode: resMovCode,
+            movieCode: resMovCode[1],
             info: $('#id_info').val(),
             category: $('#id_cat').val() 
         }
