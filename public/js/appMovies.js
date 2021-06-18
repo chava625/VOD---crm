@@ -18,7 +18,7 @@ const init = async () => {
       createMovie(resp.data);
       $.supermodal();
     } else {
-      createMovie('no results')
+      $('.tbl').html('no results')
     }
     // console.log(resp.data);
   } catch (err) {
