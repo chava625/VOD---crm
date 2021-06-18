@@ -44,7 +44,6 @@ router.get("/admin", authToken, (req, res) => {
 });
 router.post("/login", async (req, res) => {
   let valid = validLogin(req.body);
-
   if (!valid.error) {
     try {
       let dataDB = await userModel.findOne({ email: req.body.email });
@@ -53,7 +52,6 @@ router.post("/login", async (req, res) => {
         if (!validPass) {
           res.json("The Passwoed not valid");
         } else {
-      
           let token = genToken(dataDB._id, dataDB.email);
           res.json({ token });
         }
