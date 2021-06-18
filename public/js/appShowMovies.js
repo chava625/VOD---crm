@@ -36,8 +36,12 @@ const showMyMovies = async() =>{
         }
     })
     let data = resp.data;
-    console.log(data.length);
-    createShowMovies(data);
+    if(data.length){
+      createShowMovies(data);
+    }
+      else{
+        $('#id_parent').html("<h5 style='background: none'>You don't have any movies you need to <a href='/addMovie.html'>Upload</a></h5>")
+      }
     } catch(err){
         console.error(err);
     }
