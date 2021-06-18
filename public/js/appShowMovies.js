@@ -40,7 +40,7 @@ const showMyMovies = async() =>{
       createShowMovies(data);
     }
       else{
-        $('#id_parent').html("<h5 class='table'>You don't have any movies <br> you need to<span><a href='/addMovie.html'>Upload</a></span></h5>")
+        $('#id_parent').html("<h5>You don't have any movies <br> you need to<a class='m-0 p-0' href='/addMovie.html'>Upload</a></h5>")
       }
     } catch(err){
         console.error(err);
