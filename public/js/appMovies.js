@@ -19,7 +19,7 @@ const init = async () => {
       $.supermodal();
     } else {
       $('.tbl').html("")
-      $('#id_parent').html("<h5 style=''>You don't have any movies you need to <a href='/addMovie.html'>Upload</a></h5>")
+      $('#id_parent').append("<h5 style=''>You don't have any movies you need to <a href='/addMovie.html'>Upload</a></h5>")
     }
     // console.log(resp.data);
   } catch (err) {
