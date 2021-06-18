@@ -1,6 +1,3 @@
-
-
-console.log(document.querySelector("#nav_btn"));
 const btn = document.querySelector("#nav_btn");
 
 $(btn).on("click", () =>{
