@@ -13,16 +13,7 @@ router.get("/", (req, res) => {
     }
   });
 });
-router.get("/ofUser", authToken, (req, res) => {
-  let movsUser = req._id;
-  movieModel.find({ userId: movsUser }, (err, data) => {
-    if (err) {
-      res.status(400).json(err);
-    } else {
-      res.json(data);
-    }
-  });
-});
+r
 router.post("/add", authToken, async (req, res) => {
   let usId = req._id;
   let valid = validMovie(req.body);
