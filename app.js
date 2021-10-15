@@ -1,5 +1,6 @@
 const express = require('express');
 const mongo = require('./db/mongo');
+const path = require('path');
 
 const createError = require('http-errors');
 
@@ -41,5 +42,8 @@ app.use((err, req, res, next) => {
   });
 });
  
-// app.listen(3000);
-app.listen(process.env.PORT || 3000)
+// app.listen(process.env.PORT || 3000)
+
+app.listen(process.env.PORT || 3000,() =>{
+  console.log("Express server listening on port 4000",app.settings.env);
+});
