@@ -13,6 +13,7 @@ router.get("/", (req, res) => {
     }
   });
 });
+
 router.post("/add", authToken, async (req, res) => {
   let usId = req._id;
   let valid = validMovie(req.body);
@@ -63,6 +64,16 @@ router.delete("/delete/:id", authToken, async (req, res) => {
     .then((err) => {
       res.status(400).json(err);
     });
+});
+router.get("/ofUser", authToken, (req, res) => {
+  let userId = req._id;
+  movieModel.find({ userId: userId }, (err, data) => {
+    if (err) {
+      res.status(401).json(err);
+    } else {
+      res.json(data);
+    }
+  });
 });
 
 module.exports = router;
