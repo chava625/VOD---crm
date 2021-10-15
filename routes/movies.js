@@ -13,7 +13,6 @@ router.get("/", (req, res) => {
     }
   });
 });
-r
 router.post("/add", authToken, async (req, res) => {
   let usId = req._id;
   let valid = validMovie(req.body);
