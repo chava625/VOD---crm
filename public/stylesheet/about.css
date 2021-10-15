@@ -22,7 +22,7 @@ main .about p{
 }
 @media screen and (max-width:768px){
     main{
-        min-height: 95vh;
+        min-height: 100vh;
         background-image:url('https://image.freepik.com/free-photo/clapperboard-popcorn-film-stripe-cinema-tickets-wooden-desk_23-2148188189.jpg');
         background-repeat: no-repeat;
         background-size: cover;
