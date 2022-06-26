@@ -13,7 +13,6 @@ const init = () => {
             info: $('#id_info').val(),
             category: $('#id_cat').val() 
         }
-        // console.log(dataBody);
         axios({
             method:'POST',
             url: '/movies/add/',
@@ -26,6 +25,9 @@ const init = () => {
             console.log(myData);
             window.location.href = 'myMovies.html'
         })
-        .catch( err => console.log(err))
+        .catch( err =>{
+            alert(err)
+             console.log(err)
+        })
     })
 }

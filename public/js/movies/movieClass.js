@@ -72,6 +72,7 @@ const del = (_id) => {
     })
     .catch((err) => {
       console.log(err.response);
+      alert(err.response)
     });
 };
 

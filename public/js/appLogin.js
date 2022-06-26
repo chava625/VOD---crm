@@ -9,14 +9,12 @@ const init = () =>{
            email: $('#id_email').val(),
            pass: $('#id_pass').val()
         }
-        // console.log(dataBody);
         axios({
             method: 'POST',
             url: '/users/login/',
             data: dataBody  
         })
         .then(myData =>{
-            // console.log(myData.data);
             localStorage.setItem('token', myData.data.token)
             window.location.href = 'myInfo.html'
         })

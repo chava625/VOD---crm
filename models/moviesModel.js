@@ -48,7 +48,6 @@ const movieSchema = new mongoose.Schema({
            info: Joi.string().min(2).max(500).required(),
            category:Joi.string().min(1).max(50).required(),
            likes:Joi.array()
-          
          })
          return schema.validate(_mov);
        }
